@@ -1,0 +1,7 @@
+{
+  "name": "Tpcours",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

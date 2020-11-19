@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add a course</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+  <form #newCours="ngForm" (ngSubmit)="addCourse(newCours.value)" class="ion-margin-horizontal">
+      <ion-item>
+      <ion-label for="intitule" position="floating">Title</ion-label>
+      <ion-input ngModel required type="text" class="from-control" id="intitule" name="intitule"></ion-input>
+      <!-- <ion-input ngModel #title="ngModel" required type="text" /> -->
+    </ion-item>
+    <ion-item>
+      <ion-label for="author" position="floating">Author </ion-label>
+     <ion-input ngModel type="text" class="form-control" id="author" name="author" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label for="image" position="floating">Image</ion-label>
+      <ion-input ngModel type="text" class="form-control" id="image" name="image" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label for="keywords" position="floating">Keywords</ion-label>
+      <ion-input ngModel type="text" class="from-control" id="keywords" name="keywords" ></ion-input>
+      
+    </ion-item>
+    <div><ion-label color="danger">use comma to separate keywords</ion-label></div>
+    <ion-col class="ion-padding-vertical">
+      <ion-button [disabled]="newCours.invalid"class="ion-margin-horizontal" color="primary" expand="full" 
+      shape="round"(click)="addCourses(newCours.value)" [routerLink]="['/all']" >Add<ion-icon
+          name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </form>
+</div>
+
+</ion-content>

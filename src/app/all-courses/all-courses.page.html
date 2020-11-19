@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar   color="primary">
+    <ion-title>Our Catalogue</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/new-courses']">
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p class="ion-margin-horizontal"><strong>We prpose these new courses:</strong></p>
+<ion-list>
+  <ion-item [routerLink]="['/all','detail', cours.id]" *ngFor="let cours of tabCourses">
+    <ion-avatar> <ion-img src="{{cours.image}}"> </ion-img></ion-avatar>
+    <ion-label class="ion-margin-horizontal">{{cours.intitule}}</ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>

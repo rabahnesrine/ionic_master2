@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <p class="ion-margin-horizontal"> <strong>Detail of this course</strong></p>
+<div  class="ion-margin-horizontal"> 
+  <ion-img  src="{{c.image}}"
+   style=" height: auto;
+   width: 100px;
+   margin: auto;
+   display: block;"></ion-img></div>
+   <ion-col class="ion-padding-vertical">
+  <h2 class="ion-margin-horizontal" style="font-weight: bold;text-align:center">
+    {{c.intitule}} By {{c.author}}</h2>
+
+<h4 class="ion-margin-horizontal" style="font-weight: bold;">Content of this course :</h4>
+<ion-list class="ion-margin-horizontal">
+  <ion-item *ngFor=" let word of c.keywords">
+    <ion-label>{{word}}
+  </ion-label>
+  </ion-item>
+
+</ion-list>
+</ion-col>
+</ion-content>

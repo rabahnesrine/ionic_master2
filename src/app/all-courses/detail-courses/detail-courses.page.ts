@@ -25,39 +25,5 @@ export class DetailCoursesPage implements OnInit {
    } 
       
     })
-    /* let id = parseInt(this.snapshot.paramMap.get('id'));
-    this.couId=id; */
-
-   /*  this._Activatedroute.params.subscribe(
-      (cours : Params) => {
-        this.courseServ.getCoursesById(cours['id']).subscribe(( cou : Course) => {
-            this.c = cou;
-          },
-          (error) => {
-            console.log('error with getPersonne')
-          }
-        )
-      },
-      (error) => {
-        console.log('Absence de Route Parameters');
-        
-      }
-    );
-  } */
-  }
-  /* initialiser(){
-    this.courseServ.getCoursesById(this._Activatedroute.snapshot.paramMap.get("id"))
-    .subscribe((course)=>this.c=course)}
-
-  }
-   */
-
-   
-
-  
-
-
- 
-  
-
-}
+    
+  }}
